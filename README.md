@@ -15,6 +15,22 @@
 
 # 砚台/InkStone
 
+## develop分支开发新计划
+> 功能都开发完了，接下来重点是一堆fix和chore，敬请期待。
+
+- [ ] 重构css样式，更换sass语法。添加夜间模式支持
+- [ ] 重构组件代码，分离混合搅乱的部分
+- [ ] 添加按需导入，分片打包。优化加载速度
+- [ ] 添加更加实用的图床管理功能
+- [ ] 添加Wasm本地处理图片的能力
+- [ ] Pwa优化，向本地编辑器功能看齐
+- [ ] 完善现有的Codemirror编辑器功能
+- [ ] 修复编辑器全屏Bug
+- [ ] Front Matter 可视化编辑改为可选
+- [ ] 修复个人Token登录流程
+
+
+
 ## 💡 介绍
 
 《砚台》是一款由 Vue 开发的在线 Markdown 编辑器，特意为 Hexo、Hugo 等静态站点生成器设计，支持同步到 Github，可视化编辑 yaml front matter 等贴心功能。《砚台》完全运行在浏览器，可以和静态站点一起发布。
@@ -25,15 +41,9 @@
     <a href="docs/screenshots.md">@更多截图</a>
 </div>
 
-### 补充强调
-
-1. 项目需要随时拉取，提交 Github，如果不能流畅访问 Github 则只能使用基础编辑功能。
-
-2. 目前 token 都会保存在浏览器本地（简单加密，但是加密算法写死在前端项目中），所以务必注意秘钥安全。如果需要自己创建秘钥使用，最好能够给予最小权限。
-
 ### 体验地址
 
-[Vercel](https://app.inkstone.work)
+[Vercel](https://dev.inkstone.work)
 
 <!-- 1. [Github Pages](https://www.1think2program.cn/HugoEditor) -->
 
