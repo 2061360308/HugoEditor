@@ -1,115 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>InkStone</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta
-      name="description"
-      content="为 Hexo、Hugo 等静态站点生成器设计的在线编辑器"
-    />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
-    />
-    <link
-      rel="stylesheet"
-      href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css"
-    />
-    <!-- 侧边栏插件的样式 -->
-    <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" /> -->
-  </head>
-  <body>
-    <style>
-      section.cover.has-mask .mask {
-        opacity: 0;
+<head>
+  <meta charset="UTF-8" />
+  <title>InkStone</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="为 Hexo、Hugo 等静态站点生成器设计的在线编辑器" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css" />
+</head>
+<body>
+  <style>
+    section.cover.has-mask .mask {
+      opacity: 0;
+    }
+    .app-name img {
+      height: 75px;
+    }
+  </style>
+  <div id="app">很快！等我一下！</div>
+  <script>
+    window.$docsify = {
+      name: "InkStone",
+      repo: "https://github.com/2061360308/InkStone",
+      coverpage: true,
+      loadSidebar: true,
+      auto2top: true,
+      logo: "/images/cover.png",
+      name: 'inkStone',
+      mergeNavbar: true,
+      search: {
+        maxAge: 86400000,
+        paths: "auto",
+        placeholder: "搜索",
+        noData: "找不到结果",
+        depth: 4,
+        hideOtherSidebarContent: false,
+        namespace: "inkstone",
+      },
+      count: {
+        countable: true,
+        position: "top",
+        margin: "10px",
+        float: "right",
+        fontsize: "0.9em",
+        color: "rgb(90,90,90)",
+        language: "chinese",
+        localization: {
+          words: "",
+          minute: "",
+        },
+        isExpected: true,
+      },
+      pagination: {
+        previousText: '上一章',
+        nextText: '下一章',
+        crossChapter: false, // 允许跨章节导航
+        crossChapterText: false, // 显示章节名称
+        filter: function (title) {
+        // 只处理一级标题，忽略二级标题
+        return title.split('#').length === 1;  // 只处理没有空格的一级标题
       }
-      .app-name img{
-        height: 75px;
-      }
-    </style>
-    <div id="app">很快！等我一下！</div>
-    <script>
-      window.$docsify = {
-        name: "InkStone",
-        repo: "https://github.com/2061360308/InkStone",
-        coverpage: true,
-        loadSidebar: true,
-        // 切换页面后跳回页面顶部
-        auto2top: true,
-        // 侧边栏左侧的logo
-        logo: "/images/cover.png",
-        // 侧边栏左侧的标题
-        name: 'inkStone',
-        // 移动设备合并导航栏到侧边栏
-        mergeNavbar: true,
-        //插件设置
-        // -----------------------------------------------------
-        // 搜索配置
-        search: {
-          maxAge: 86400000,
-          paths: "auto",
-          placeholder: "搜索",
-          noData: "找不到结果",
-          depth: 4,
-          hideOtherSidebarContent: false,
-          namespace: "inkstone",
+      },
+      "flexible-alerts": {
+        style: "flat",
+        note: {
+          label: "信息",
         },
-        // 字数插件
-        count: {
-          countable: true,
-          position: "top",
-          margin: "10px",
-          float: "right",
-          fontsize: "0.9em",
-          color: "rgb(90,90,90)",
-          language: "chinese",
-          localization: {
-            words: "",
-            minute: "",
-          },
-          isExpected: true,
+        tip: {
+          label: "提示",
         },
-        // 分页导航插件
-        pagination: {
-          previousText: "上一章",
-          nextText: "下一章",
-          crossChapter: true,
-          crossChapterText: true,
+        warning: {
+          label: "注意",
         },
-        // 文本高亮
-        "flexible-alerts": {
-          style: "flat",
-          note: {
-            label: "信息",
-          },
-          tip: {
-            label: "提示",
-          },
-          warning: {
-            label: "注意",
-          },
-          attention: {
-            label: "切记",
-          },
+        attention: {
+          label: "切记",
         },
-      };
-    </script>
-    <!-- Docsify v4 -->
-    <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
-    <!-- 搜索 -->
-    <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
-    <!-- 图片放大缩小支持 -->
-    <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
-    <!-- 字数插件 -->
-    <script src="https://cdn.jsdelivr.net/npm/docsify-count@latest/dist/countable.min.js"></script>
-    <!-- 分页导航 -->
-    <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
-    <!-- 文本高亮 -->
-    <script src="https://unpkg.com/docsify-plugin-flexible-alerts"></script>
-    <!-- 侧边栏扩展与折叠 -->
-    <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
-    <!-- 页脚信息 -->
-    <script src="//cdn.jsdelivr.net/npm/@alertbox/docsify-footer/dist/docsify-footer.min.js"></script>
-  </body>
+      },
+    };
+  </script>
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-count@latest/dist/countable.min.js"></script>
+  <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  <script src="https://unpkg.com/docsify-plugin-flexible-alerts"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/@alertbox/docsify-footer/dist/docsify-footer.min.js"></script>
+</body>
 </html>

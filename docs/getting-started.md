@@ -1,3 +1,4 @@
+## 快速开始
 ## 安装APP
 
 1.进入Inkstone示例网站后， 会弹出提示如图，按照指示下载这个app
@@ -32,29 +33,30 @@
 
 2.编辑前的GitHub中的REAMDE.md文件，我打算在Inkstone中删除下面的日期
 
-<img width="416" alt="image" src="https://github.com/user-attachments/assets/b905f34d-35e1-4076-8e82-1437216f0340" />
+<img src="/images/EG.png" alt="授权登录" width="616" height="500">
 
 
 
 3.这是Inkstone 中的REAMDE.md文件 
 
-<img width="415" alt="image" src="https://github.com/user-attachments/assets/a4a2284a-49e4-4355-91cb-be4eeae9b5ad" />
+<img src="/images/INKEG.png"  width="616" height="500">
 
-4.我们删除下面的日期，然后保存。如图
+4.我们删除下面的日期，然后保存，然后点击提交。如图
 
-<img width="285" alt="image" src="https://github.com/user-attachments/assets/21016282-9522-4203-85a3-6700262df844" />
+<img src="/images/PUSH.png"  width="316" height="500">
 
 5.点击后，就可以看到本次更改了哪些文件，如果你更新了多个文件，在这里也可以选择只提交一个特有的文件，不要想的文件可以放弃更改。
 
-<img width="281" alt="image" src="https://github.com/user-attachments/assets/b04d7388-ef12-4b7d-b4eb-95a11d1724c4" />
+<img src="/images/PD.png"  width="316" height="500">
 
 6.现在我们提交上去，记得打开VPN然后在提交，不然会出现404或者502等等的问题，会出现一直转圈的情况。
-提交成功后会出现 commit success的小弹窗，或者打开开发者工具，查看console日志
+提交成功后会出现 commit success的小弹窗，或者打开开发者工具，查看console日志,看到README.md UPDATE后，则表示提交成功。
 
-<img width="415" alt="image" src="https://github.com/user-attachments/assets/5f8d132e-36f8-4618-8bcb-d537a70117a5" />
+<img src="/images/SP.png"  width="516" height="400">
 
 7.出现这种的 则表示README.md文件更新成功。我们现在刷新一下GitHub查看一下是否修改成功。
-<img width="415" alt="image" src="https://github.com/user-attachments/assets/c58b1020-1251-4586-a146-b73437ca9d3e" />
-可以看到已经成功删除了下面的一行日期。
 
-## 图床配置
+<img src="/images/RESULT.png"  width="616" height="500">
+
+可以看到已经成功在远程的GitHub里面删除了下面的一行日期。
+
